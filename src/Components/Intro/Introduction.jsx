@@ -253,8 +253,16 @@ import ThemeTemplateData from "../../db/ThemeTemplateData";
 import { Helmet } from "react-helmet";
 import { FaCheck, FaRegLightbulb, FaFileDownload, FaAward, FaUserTie } from "react-icons/fa";
 import { MdTimer, MdOutlineDesignServices } from "react-icons/md";
+// import { useNavigate } from "react-router-dom";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { auth } from "../../firebase"; // adjust path as needed
+
 
 export default function Introduction() {
+
+//   const [user] = useAuthState(auth);
+// const navigate = useNavigate();
+
   const {
     selectBtn,
     setSelectBtn,
@@ -561,3 +569,4 @@ export default function Introduction() {
     </>
   );
 }
+
