@@ -241,13 +241,13 @@ export default function Navbar() {
   return (
       <Box id='navbar' bg={bgColor} px={4} className="nav-container">
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-              <RouterLink to='/home' className="nav-logo">
+              <RouterLink to='/' className="nav-logo">
                   <Box><img src={logo} alt="logo" /></Box>
               </RouterLink>
 
               <HStack spacing={8} alignItems={'center'}>
                   <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }} className="nav-menu">
-                      <RouterLink to='/introduction'>
+                      <RouterLink to='/'>
                           <Button variant="ghost" _hover={{ bg: hoverBg }} color={textColor} className="nav-menu-item nav-button">Home</Button>
                       </RouterLink>
                       <RouterLink to='/about'>
