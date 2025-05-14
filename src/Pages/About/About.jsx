@@ -154,100 +154,272 @@
     
     //     );
     // }
-    import {
-        Box,
-        Heading,
-        Text,
-        SimpleGrid,
-        Icon,
-        VStack,
-        // useBreakpointValue,
-        // useColorModeValue
-    } from "@chakra-ui/react";
-    import { FaUserTie, FaAward, FaFileDownload } from "react-icons/fa";
+
+
     
-    // ... (keep all your existing imports)
+  //   import {
+  //       Box,
+  //       Heading,
+  //       Text,
+  //       SimpleGrid,
+  //       Icon,
+  //       VStack,
+  //       // useBreakpointValue,
+  //       // useColorModeValue
+  //   } from "@chakra-ui/react";
+  //   import { FaUserTie, FaAward, FaFileDownload } from "react-icons/fa";
     
-    // Add this section where you want the "About Our Resume Builder" content to appear
+  //   // ... (keep all your existing imports)
     
-    export default function About() {
-        return(
-            <div>
-                <Box mt={16} w="full" textAlign="center" px={{ base: 4, md: 0 }}>
-    <Heading size="xl" mb={8} color="blue.600">
-      Why Professionals Choose Our Resume Builder
-    </Heading>
+  //   // Add this section where you want the "About Our Resume Builder" content to appear
     
-    <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mb={12}>
-      {/* Feature 1 */}
-      <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
-        <Icon as={FaUserTie} boxSize={10} color="blue.500" mb={4} />
-        <Heading size="md" mb={4}>Interview-Winning Templates</Heading>
-        <Text>
-          Our recruiter-approved designs increase interview calls by 2.5×. 
-          Jessica R. landed 4 interviews in 2 weeks using our modern template.
-        </Text>
-      </Box>
+  //   export default function About() {
+  //       return(
+  //           <div>
+  //               <Box mt={16} w="full" textAlign="center" px={{ base: 4, md: 0 }}>
+  //   <Heading size="xl" mb={8} color="blue.600">
+  //     Why Professionals Choose Our Resume Builder
+  //   </Heading>
+    
+  //   <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mb={12}>
+  //     {/* Feature 1 */}
+  //     <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
+  //       <Icon as={FaUserTie} boxSize={10} color="blue.500" mb={4} />
+  //       <Heading size="md" mb={4}>Interview-Winning Templates</Heading>
+  //       <Text>
+  //         Our recruiter-approved designs increase interview calls by 2.5×. 
+  //         Jessica R. landed 4 interviews in 2 weeks using our modern template.
+  //       </Text>
+  //     </Box>
       
-      {/* Feature 2 */}
-      <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
-        <Icon as={FaAward} boxSize={10} color="blue.500" mb={4} />
-        <Heading size="md" mb={4}>ATS Optimization</Heading>
-        <Text>
-          92% of our users pass automated screening systems. 
-          Michael T. got past Google's ATS on his first try using our optimized format.
-        </Text>
-      </Box>
+  //     {/* Feature 2 */}
+  //     <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
+  //       <Icon as={FaAward} boxSize={10} color="blue.500" mb={4} />
+  //       <Heading size="md" mb={4}>ATS Optimization</Heading>
+  //       <Text>
+  //         92% of our users pass automated screening systems. 
+  //         Michael T. got past Google's ATS on his first try using our optimized format.
+  //       </Text>
+  //     </Box>
       
-      {/* Feature 3 */}
-      <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
-        <Icon as={FaFileDownload} boxSize={10} color="blue.500" mb={4} />
-        <Heading size="md" mb={4}>Customization Made Easy</Heading>
-        <Text>
-          Change fonts, colors, and layouts in seconds. 
-          Recent grad Emily K. customized her resume for 3 different industries in 15 minutes.
-        </Text>
-      </Box>
-    </SimpleGrid>
+  //     {/* Feature 3 */}
+  //     <Box p={6} borderWidth="1px" borderRadius="xl" boxShadow="lg">
+  //       <Icon as={FaFileDownload} boxSize={10} color="blue.500" mb={4} />
+  //       <Heading size="md" mb={4}>Customization Made Easy</Heading>
+  //       <Text>
+  //         Change fonts, colors, and layouts in seconds. 
+  //         Recent grad Emily K. customized her resume for 3 different industries in 15 minutes.
+  //       </Text>
+  //     </Box>
+  //   </SimpleGrid>
   
-    <VStack spacing={6} maxW="3xl" mx="auto" textAlign="left" mb={12}>
-      <Heading size="lg">Our Success Stories</Heading>
+  //   <VStack spacing={6} maxW="3xl" mx="auto" textAlign="left" mb={12}>
+  //     <Heading size="lg">Our Success Stories</Heading>
       
-      <Box p={6} bg="blue.50" borderRadius="xl" w="full">
-        <Text fontStyle="italic" mb={2}>
-          "After 6 months of rejections, I rebuilt my resume here and got 3 offers in 3 weeks. 
-          The guided sections helped me highlight achievements I didn't know were valuable."
-        </Text>
-        <Text fontWeight="bold">— David L., Product Manager</Text>
-      </Box>
+  //     <Box p={6} bg="blue.50" borderRadius="xl" w="full">
+  //       <Text fontStyle="italic" mb={2}>
+  //         "After 6 months of rejections, I rebuilt my resume here and got 3 offers in 3 weeks. 
+  //         The guided sections helped me highlight achievements I didn't know were valuable."
+  //       </Text>
+  //       <Text fontWeight="bold">— David L., Product Manager</Text>
+  //     </Box>
       
-      <Box p={6} bg="blue.50" borderRadius="xl" w="full">
-        <Text fontStyle="italic" mb={2}>
-          "The industry-specific examples helped me translate my military experience 
-          into corporate language that got me hired at a Fortune 500 company."
-        </Text>
-        <Text fontWeight="bold">— Sarah M., Operations Specialist</Text>
-      </Box>
-    </VStack>
+  //     <Box p={6} bg="blue.50" borderRadius="xl" w="full">
+  //       <Text fontStyle="italic" mb={2}>
+  //         "The industry-specific examples helped me translate my military experience 
+  //         into corporate language that got me hired at a Fortune 500 company."
+  //       </Text>
+  //       <Text fontWeight="bold">— Sarah M., Operations Specialist</Text>
+  //     </Box>
+  //   </VStack>
   
-    <Box bg="gray.50" p={8} borderRadius="xl" maxW="4xl" mx="auto">
-      <Heading size="lg" mb={4}>How It Works</Heading>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
-        <Box>
-          <Text fontWeight="bold" mb={2}>1. Select Your Template</Text>
-          <Text>Choose from 30+ designs optimized for your industry</Text>
+  //   <Box bg="gray.50" p={8} borderRadius="xl" maxW="4xl" mx="auto">
+  //     <Heading size="lg" mb={4}>How It Works</Heading>
+  //     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+  //       <Box>
+  //         <Text fontWeight="bold" mb={2}>1. Select Your Template</Text>
+  //         <Text>Choose from 30+ designs optimized for your industry</Text>
+  //       </Box>
+  //       <Box>
+  //         <Text fontWeight="bold" mb={2}>2. Customize Content</Text>
+  //         <Text>Use our pre-written bullet points or add your own</Text>
+  //       </Box>
+  //       <Box>
+  //         <Text fontWeight="bold" mb={2}>3. Download & Apply</Text>
+  //         <Text>Get a polished PDF ready for job applications</Text>
+  //       </Box>
+  //     </SimpleGrid>
+  //   </Box>
+  // </Box>
+  //           </div>
+  //       )
+  //   }
+
+
+
+  import {
+    Box,
+    Heading,
+    Text,
+    SimpleGrid,
+    Icon,
+    VStack,
+    useBreakpointValue,
+    useColorModeValue
+} from "@chakra-ui/react";
+import { FaUserTie, FaAward, FaFileDownload } from "react-icons/fa";
+
+export default function About() {
+    // Responsive values
+    const headingSize = useBreakpointValue({ base: "xl", md: "2xl" });
+    const subHeadingSize = useBreakpointValue({ base: "lg", md: "xl" });
+    const featurePadding = useBreakpointValue({ base: 4, md: 6 });
+    const gridSpacing = useBreakpointValue({ base: 6, md: 10 });
+    const boxShadow = useBreakpointValue({ base: "md", md: "lg" });
+    const bgColor = useColorModeValue("blue.50", "blue.900");
+    const cardBg = useColorModeValue("white", "gray.800");
+
+    return (
+        <Box as="section" py={{ base: 8, md: 16 }} px={{ base: 4, md: 8 }}>
+            <Box maxW="7xl" mx="auto" textAlign="center">
+                <Heading 
+                    size={headingSize} 
+                    mb={{ base: 6, md: 10 }} 
+                    color="blue.600"
+                    lineHeight="shorter"
+                >
+                    Why Professionals Choose Our Resume Builder
+                </Heading>
+
+                <SimpleGrid 
+                    columns={{ base: 1, md: 3 }} 
+                    spacing={gridSpacing} 
+                    mb={{ base: 8, md: 12 }}
+                >
+                    {/* Feature 1 */}
+                    <Box 
+                        p={featurePadding} 
+                        borderWidth="1px" 
+                        borderRadius="xl" 
+                        boxShadow={boxShadow}
+                        bg={cardBg}
+                        transition="all 0.3s"
+                        _hover={{ transform: "translateY(-4px)", shadow: "xl" }}
+                    >
+                        <VStack spacing={4} align="flex-start">
+                            <Icon as={FaUserTie} boxSize={10} color="blue.500" />
+                            <Heading size="md">Interview-Winning Templates</Heading>
+                            <Text fontSize={{ base: "sm", md: "md" }}>
+                                Our recruiter-approved designs increase interview calls by 2.5×. 
+                                Jessica R. landed 4 interviews in 2 weeks using our modern template.
+                            </Text>
+                        </VStack>
+                    </Box>
+                    
+                    {/* Feature 2 */}
+                    <Box 
+                        p={featurePadding} 
+                        borderWidth="1px" 
+                        borderRadius="xl" 
+                        boxShadow={boxShadow}
+                        bg={cardBg}
+                        transition="all 0.3s"
+                        _hover={{ transform: "translateY(-4px)", shadow: "xl" }}
+                    >
+                        <VStack spacing={4} align="flex-start">
+                            <Icon as={FaAward} boxSize={10} color="blue.500" />
+                            <Heading size="md">ATS Optimization</Heading>
+                            <Text fontSize={{ base: "sm", md: "md" }}>
+                                92% of our users pass automated screening systems. 
+                                Michael T. got past Google's ATS on his first try using our optimized format.
+                            </Text>
+                        </VStack>
+                    </Box>
+                    
+                    {/* Feature 3 */}
+                    <Box 
+                        p={featurePadding} 
+                        borderWidth="1px" 
+                        borderRadius="xl" 
+                        boxShadow={boxShadow}
+                        bg={cardBg}
+                        transition="all 0.3s"
+                        _hover={{ transform: "translateY(-4px)", shadow: "xl" }}
+                    >
+                        <VStack spacing={4} align="flex-start">
+                            <Icon as={FaFileDownload} boxSize={10} color="blue.500" />
+                            <Heading size="md">Customization Made Easy</Heading>
+                            <Text fontSize={{ base: "sm", md: "md" }}>
+                                Change fonts, colors, and layouts in seconds. 
+                                Recent grad Emily K. customized her resume for 3 different industries in 15 minutes.
+                            </Text>
+                        </VStack>
+                    </Box>
+                </SimpleGrid>
+
+                <VStack 
+                    spacing={6} 
+                    maxW="3xl" 
+                    mx="auto" 
+                    textAlign="left" 
+                    mb={{ base: 8, md: 12 }}
+                >
+                    <Heading size={subHeadingSize}>Our Success Stories</Heading>
+                    
+                    <Box 
+                        p={6} 
+                        bg={bgColor}
+                        borderRadius="xl" 
+                        w="full"
+                        boxShadow="base"
+                    >
+                        <Text fontStyle="italic" mb={2} fontSize={{ base: "sm", md: "md" }}>
+                            "After 6 months of rejections, I rebuilt my resume here and got 3 offers in 3 weeks. 
+                            The guided sections helped me highlight achievements I didn't know were valuable."
+                        </Text>
+                        <Text fontWeight="bold">— David L., Product Manager</Text>
+                    </Box>
+                    
+                    <Box 
+                        p={6} 
+                        bg={bgColor}
+                        borderRadius="xl" 
+                        w="full"
+                        boxShadow="base"
+                    >
+                        <Text fontStyle="italic" mb={2} fontSize={{ base: "sm", md: "md" }}>
+                            "The industry-specific examples helped me translate my military experience 
+                            into corporate language that got me hired at a Fortune 500 company."
+                        </Text>
+                        <Text fontWeight="bold">— Sarah M., Operations Specialist</Text>
+                    </Box>
+                </VStack>
+
+                <Box 
+                    bg={useColorModeValue("gray.50", "gray.700")} 
+                    p={{ base: 6, md: 8 }} 
+                    borderRadius="xl" 
+                    maxW="4xl" 
+                    mx="auto"
+                    boxShadow="base"
+                >
+                    <Heading size={subHeadingSize} mb={{ base: 4, md: 6 }}>How It Works</Heading>
+                    <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 4, md: 6 }}>
+                        <Box>
+                            <Text fontWeight="bold" mb={2}>1. Select Your Template</Text>
+                            <Text fontSize={{ base: "sm", md: "md" }}>Choose from 30+ designs optimized for your industry</Text>
+                        </Box>
+                        <Box>
+                            <Text fontWeight="bold" mb={2}>2. Customize Content</Text>
+                            <Text fontSize={{ base: "sm", md: "md" }}>Use our pre-written bullet points or add your own</Text>
+                        </Box>
+                        <Box>
+                            <Text fontWeight="bold" mb={2}>3. Download & Apply</Text>
+                            <Text fontSize={{ base: "sm", md: "md" }}>Get a polished PDF ready for job applications</Text>
+                        </Box>
+                    </SimpleGrid>
+                </Box>
+            </Box>
         </Box>
-        <Box>
-          <Text fontWeight="bold" mb={2}>2. Customize Content</Text>
-          <Text>Use our pre-written bullet points or add your own</Text>
-        </Box>
-        <Box>
-          <Text fontWeight="bold" mb={2}>3. Download & Apply</Text>
-          <Text>Get a polished PDF ready for job applications</Text>
-        </Box>
-      </SimpleGrid>
-    </Box>
-  </Box>
-            </div>
-        )
-    }
+    )
+}

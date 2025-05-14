@@ -1,0 +1,125 @@
+/* Navbar.css */
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Base mobile styles (default) */
+  .nav-container {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .nav-logo img {
+    height: 44px;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-logo:hover img {
+    transform: scale(1.05);
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-menu-item {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+  
+  /* Tablet styles (min-width: 768px) */
+  @media (min-width: 768px) {
+    .nav-container {
+      padding: 0 2rem;
+    }
+    
+    .nav-menu {
+      flex-direction: row;
+      width: auto;
+      gap: 1rem;
+    }
+    
+    .nav-menu-item {
+      width: auto;
+      margin: 0;
+    }
+    
+    .mobile-menu-button {
+      display: none;
+    }
+  }
+  
+  /* Desktop styles (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .nav-container {
+      max-width: 1200px;
+      padding: 0 3rem;
+    }
+    
+    .nav-menu {
+      gap: 2rem;
+    }
+    
+    .nav-menu-item {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* Dark mode specific styles */
+  [data-theme='dark'] #navbar {
+    background-color: var(--chakra-colors-blue-700);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  [data-theme='dark'] .nav-menu-item {
+    color: white;
+  }
+  
+  /* Animation for mobile menu */
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+  
+  /* Avatar styles */
+  .nav-avatar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nav-avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Button hover effects */
+  .nav-button {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Theme toggle button */
+  .theme-toggle {
+    transition: transform 0.5s ease;
+  }
+  
+  .theme-toggle:hover {
+    transform: rotate(30deg);
+  }

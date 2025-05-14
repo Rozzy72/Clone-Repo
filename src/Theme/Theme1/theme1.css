@@ -5,7 +5,7 @@
 
 
 /* Skills Set  */
-.skill-badge {
+/* .skill-badge {
   background-color: lightgrey !important;
   color: black !important;
   margin: 5px;
@@ -16,32 +16,269 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 
-.basic-set {
-  /* width: 61%; */
+/* .basic-set {
+  
   margin: 0rem 5rem;
   padding-top: 10px;
-}
+} */
 
 
 /* Utility  */
-.subBox {
+/* .subBox {
   margin-bottom: 15px;
+} */
+
+/* .sub-details {
+  padding: 0px 10px;
+} */
+
+/* .sub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+} */
+
+/* media quires */
+/* @media only screen and (max-width: 450px) {
+  .basic-set {
+    margin: 0rem 1rem;
+  }
+} */
+
+
+/* theme1.css */
+
+/* Base Styles */
+#theme1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.sub-details {
-  padding: 0px 10px;
+/* Header Section */
+#info {
+  padding: 1rem 0;
+  border-bottom: 2px solid lightblue;
+  margin-bottom: 1.5rem;
+}
+
+#info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+#info h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+}
+
+.text-muted {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.text-muted span {
+  display: flex;
+  align-items: center;
+}
+
+/* Section Headers */
+section {
+  margin-bottom: 1.5rem;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: lightblue;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/* Skills Section */
+#skills-set {
+  padding: 0.5rem 0;
+}
+
+.skillBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-badge {
+  background-color: #3498db;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Content Sections */
+.basic-set {
+  padding: 0.5rem 0;
+}
+
+.subBox {
+  margin-bottom: 1rem;
 }
 
 .sub-title {
-  font-size: 1.1rem;
   font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
 }
 
-/* media quires */
-@media only screen and (max-width: 450px) {
-  .basic-set {
-    margin: 0rem 1rem;
+.sub-details {
+  padding-left: 1.5rem;
+}
+
+.sub-details li {
+  margin-bottom: 0.3rem;
+  list-style-type: disc;
+}
+
+/* Dark Mode Styles */
+[data-theme='dark'] #theme1 {
+  background-color: #1a202c;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] #info h2 {
+  color: #f7fafc;
+}
+
+[data-theme='dark'] #info h3 {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .text-muted {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] section h3 {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .sub-title {
+  color: #f7fafc;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  /* Mobile Styles */
+  #theme1 {
+    padding: 0.8rem;
+  }
+
+  #info h2 {
+    font-size: 1.8rem;
+  }
+
+  #info h3 {
+    font-size: 1rem;
+  }
+
+  .text-muted {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .text-muted span {
+    margin: 0.2rem 0;
+  }
+
+  section h3 {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .skill-badge {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet Styles */
+  #theme1 {
+    padding: 1.5rem;
+  }
+
+  #info h2 {
+    font-size: 2.2rem;
+  }
+
+  section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop Styles */
+  #theme1 {
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  /* Two-column layout for desktop */
+  #experience-set,
+  #education-set,
+  #project-set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .subBox {
+    margin-bottom: 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  #theme1 {
+    padding: 0;
+    border: none;
+  }
+
+  #info {
+    padding: 0.5rem 0;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  section h3 {
+    background-color: lightblue !important;
+    color: #2c3e50 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

@@ -3,6 +3,12 @@
     margin: 5px 0px;
     align-items: center;
 }
+.Bullet_Points {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
 
 .Bullet_Points p {
     margin: 0px 5px;
@@ -17,6 +23,16 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/* .Bullet_Points Button {
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  } */
 
 
 .templatesList {
@@ -28,6 +44,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
 }
 
 .template {
@@ -41,10 +58,201 @@
     margin: auto;
     border: 1px solid black;
     margin: 10px;
+
+    position: relative;
+   
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+.template:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
 
 .template img {
     max-width: 100%;
     min-height: 100%;
     max-height: 100%;
 }
+
+/* .template img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+
+
+/* Introduction.css */
+
+/* Base mobile styles */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+  
+  /* Template grid */
+  /* .templatesList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  } */
+  
+  /* .template {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  } */
+  
+
+  
+  /* Bullet points */
+  
+  
+  
+  
+  /* Stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+  }
+  
+  /* Tablet styles (min-width: 768px) */
+  @media (min-width: 768px) {
+    .container {
+      padding: 2rem;
+    }
+    
+    .templatesList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .heading {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Desktop styles (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+      padding: 3rem;
+    }
+    
+    .templatesList {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .heading {
+      font-size: 3rem;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      gap: 3rem;
+    }
+    
+    .text-content {
+      flex: 1;
+    }
+    
+    .image-content {
+      flex: 1;
+    }
+  }
+  
+  /* Dark mode styles */
+  [data-theme='dark'] .subheading {
+    color: #a0aec0;
+  }
+  
+  [data-theme='dark'] .testimonial-card {
+    background: #2d3748;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Delay animations for staggered effect */
+  .animate-delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  .animate-delay-3 {
+    animation-delay: 0.6s;
+  }
+  
+  /* Button hover effects */
+  .primary-button {
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Feature icons */
+  .feature-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Badge styles */
+  .popular-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
