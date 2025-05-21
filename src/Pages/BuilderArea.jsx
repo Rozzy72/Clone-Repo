@@ -489,31 +489,92 @@ const BuilderArea = (props) => {
         const originalDisplay = element.style.display;
         element.style.display = 'block';
         
-        try {
-            const canvas = await html2canvas(element, {
-                scale: 2,
-                logging: false,
-                useCORS: true,
-                allowTaint: true,
-                scrollX: 0,
-                scrollY: 0,
-                windowWidth: element.scrollWidth,
-                windowHeight: element.scrollHeight,
-                backgroundColor: '#FFFFFF'
-            });
+        // try {
+        //     const canvas = await html2canvas(element, {
+        //         scale: 2,
+        //         logging: false,
+        //         useCORS: true,
+        //         allowTaint: true,
+        //         scrollX: 0,
+        //         scrollY: 0,
+        //         windowWidth: element.scrollWidth,
+        //         windowHeight: element.scrollHeight,
+        //         backgroundColor: '#FFFFFF'
+        //     });
 
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF({
-                orientation: 'portrait',
-                unit: 'mm',
-                format: 'a4'
-            });
+        //     const imgData = canvas.toDataURL('image/png');
+        //     const pdf = new jsPDF({
+        //         orientation: 'portrait',
+        //         unit: 'mm',
+        //         format: 'a4'
+        //     });
 
-            const imgWidth = 210;
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        //     const imgWidth = 210;
+        //     const imgHeight = (canvas.height * imgWidth) / canvas.width;
             
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-            pdf.save('resume.pdf');
+        //     pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        //     pdf.save('resume.pdf');
+        try {
+      const canvas = await html2canvas(element, {
+        // scale: 2,
+        // logging: false,
+        // useCORS: true,
+        // allowTaint: true,
+        // scrollX: 0,
+        // scrollY: 0,
+        // windowWidth: element.scrollWidth,
+        // windowHeight: element.scrollHeight,
+        // backgroundColor: '#FFFFFF'
+
+        scale: 2,
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+        scrollX: 0,
+        scrollY: -window.scrollY, // Try this
+        width: element.scrollWidth,
+        height: element.scrollHeight, // Explicitly set height
+      });
+
+      const imgData = canvas.toDataURL("image/png");
+    //   const pdf = new jsPDF({
+    //     orientation: "portrait",
+    //     unit: "mm",
+    //     format: "a4",
+    //   });
+
+    //   const imgWidth = 210;
+    //   const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    //   pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+    //   pdf.save("resume.pdf");
+
+    const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+    });
+    
+    const imgWidth = 210; // A4 width in mm
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+    // If content is taller than A4 height (297mm), split into multiple pages
+    const pageHeight = 297; // A4 height in mm
+    let position = 0;
+    let remainingHeight = imgHeight;
+    
+    while (remainingHeight > 0) {
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        remainingHeight -= pageHeight;
+        position -= pageHeight;
+        
+        if (remainingHeight > 0) {
+            pdf.addPage();
+        }
+    }
+    
+    pdf.save('resume.pdf');   //added
+
         } catch (error) {
             toast({
                 title: "Error generating PDF",
